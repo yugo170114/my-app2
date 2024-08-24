@@ -11,16 +11,16 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://<GitHubアカウント名>.github.io/<GitHubリポジトリ名>/",
+  "homepage": "https://yugo170114.github.io/my-app2/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "rm": "rm -rf docs",
-    "mv": "mv build docs",
-    "git": "git add . && git commit -m 'Deploy to GitHub Pages' && git push origin master",
-    "deploy": "npm run rm && npm run build && npm run mv && npm run git"
+    "rm": "rmdir /s /q docs",
+    "mv": "move build docs",
+    "git": "git add . && git commit -m \"Deploy\" && git push origin gh-pages",
+    "deploy": "npm run rm && npm run build && npm run mv && npm run git"  
   },
   "eslintConfig": {
     "extends": [
