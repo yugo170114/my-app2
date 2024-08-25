@@ -87,9 +87,12 @@ footer {
     top: 60px;  /* ヘッダーの下に配置 */
     right: 20px;  /* 右端に配置 */
     background-color: #f8f9fa;
-    width: 200px;
+    width: 100vw; /* 全幅を使う */
+    max-width: 300px; /* 最大幅を設定 */
     border: 1px solid #ddd;
     border-radius: 5px;
+    padding: 20px; /* パディングを追加 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 影を追加して浮き出させる */
   }
 
   .nav.open {
@@ -108,6 +111,7 @@ footer {
     display: none; /* モバイルではログインボタンを非表示 */
   }
 }
+
 .page {
   text-align: center;
   font-family: Arial, sans-serif;
