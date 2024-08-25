@@ -6,45 +6,45 @@ function App() {
     <div className="App">
       {/* ヘッダー */}
       <header className="App-header">
-        <h1>My Matching App</h1>
+        <h1>マッチングアプリ</h1>
         <nav>
-          <a href="#login">Login</a>
-          <a href="#signup">Sign Up</a>
+          <a href="#login">ログイン</a>
+          <a href="#signup">サインアップ</a>
         </nav>
       </header>
 
       {/* ヒーローセクション */}
       <section className="hero">
-        <h2>Find Your Perfect Match</h2>
-        <p>Join millions of others and discover your true love.</p>
-        <button>Get Started</button>
+        <h2>理想の相手を見つけよう</h2>
+        <p>数百万の他のユーザーと一緒に、真実の愛を見つけましょう。</p>
+        <button>始める</button>
       </section>
 
       {/* サービスの特徴 */}
       <section className="features">
         <div className="feature-item">
-          <img src="A-1.png" alt="Feature 1" />
-          <h3>Easy to Use</h3>
-          <p>Our app is simple and easy to navigate.</p>
+          <img src="A-1.png" alt="特徴1" />
+          <h3>使いやすい</h3>
+          <p>アプリはシンプルで使いやすいです。</p>
         </div>
         <div className="feature-item">
-          <img src="B-1.png" alt="Feature 2" />
-          <h3>Safe & Secure</h3>
-          <p>Your privacy is our top priority.</p>
+          <img src="B-1.png" alt="特徴2" />
+          <h3>安全・安心</h3>
+          <p>プライバシーは最優先です。</p>
         </div>
         <div className="feature-item">
-          <img src="C-1.png" alt="Feature 3" />
-          <h3>Find Real Connections</h3>
-          <p>Meet people who share your interests and values.</p>
+          <img src="C-1.png" alt="特徴3" />
+          <h3>本物のつながり</h3>
+          <p>あなたの興味や価値観を共有する人と出会えます。</p>
         </div>
       </section>
 
       {/* フッター */}
       <footer>
-        <p>&copy; 2024 My Matching App. All rights reserved.</p>
+        <p>&copy; 2024 マッチングアプリ. 全著作権所有。</p>
         <nav>
-          <a href="#privacy">Privacy Policy</a>
-          <a href="#terms">Terms of Service</a>
+          <a href="#privacy">プライバシーポリシー</a>
+          <a href="#terms">利用規約</a>
         </nav>
       </footer>
     </div>

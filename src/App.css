@@ -4,19 +4,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #f8f9fa; /* ヒーローセクションと同じ背景色 */
   padding: 20px;
-  color: white;
+  color: #333;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .hero {
-  background: url('D-1.png') no-repeat center center;
-  background-size: cover;
+  background: #f8f9fa; /* ヘッダーと同じ背景色 */
   padding: 60px 20px;
-  color: white;
+  color: #333;
 }
 
 .features {
