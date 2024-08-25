@@ -10,6 +10,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.nav {
+  display: flex;
+  gap: 20px; /* リンク間のスペース */
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav.open {
+  display: block;
 }
 
 .hero {
@@ -34,4 +57,35 @@ footer {
   color: white;
   padding: 20px;
   text-align: center;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* リンク間のスペース */
+}
+
+.separator {
+  color: white;
+}
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #f8f9fa;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }

@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';  // CSSファイルのインポート
 
 function App() {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="App">
       {/* ヘッダー */}
       <header className="App-header">
-        <h1>マッチングアプリ</h1>
-        <nav>
+        <h1>カラコミ</h1>
+        <button className="hamburger" onClick={toggleMenu}>
+          ☰
+        </button>
+        <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
           <a href="#login">ログイン</a>
           <a href="#signup">サインアップ</a>
         </nav>
@@ -23,17 +32,17 @@ function App() {
       {/* サービスの特徴 */}
       <section className="features">
         <div className="feature-item">
-          <img src="A-1.png" alt="特徴1" />
+          <img src="feature1-icon.png" alt="特徴1" />
           <h3>使いやすい</h3>
           <p>アプリはシンプルで使いやすいです。</p>
         </div>
         <div className="feature-item">
-          <img src="B-1.png" alt="特徴2" />
+          <img src="feature2-icon.png" alt="特徴2" />
           <h3>安全・安心</h3>
           <p>プライバシーは最優先です。</p>
         </div>
         <div className="feature-item">
-          <img src="C-1.png" alt="特徴3" />
+          <img src="feature3-icon.png" alt="特徴3" />
           <h3>本物のつながり</h3>
           <p>あなたの興味や価値観を共有する人と出会えます。</p>
         </div>
@@ -41,9 +50,10 @@ function App() {
 
       {/* フッター */}
       <footer>
-        <p>&copy; 2024 マッチングアプリ. 全著作権所有。</p>
-        <nav>
+        <p>&copy; 2024 カラコミ. 全著作権所有。</p>
+        <nav className="footer-nav">
           <a href="#privacy">プライバシーポリシー</a>
+          <span className="separator"> | </span>
           <a href="#terms">利用規約</a>
         </nav>
       </footer>
