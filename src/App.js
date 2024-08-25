@@ -27,7 +27,6 @@ function App() {
             <Link to="/login" className="login-btn">ログイン</Link>
             <Link to="/signup" className="login-btn">新規登録</Link>
           </nav>
-          {/* ハンバーガーメニューが開いているときもログインボタンを表示 */}
           <Link to="/login" className="login-btn">ログイン</Link>
         </header>
 
@@ -36,7 +35,7 @@ function App() {
           <Route path="/company" element={<Company />} />
           <Route path="/service" element={<Service />} />
           <Route path="/" element={
-            <div>
+            <>
               <section className="hero">
                 <h2>理想の相手を見つけよう</h2>
                 <p>数百万の他のユーザーと一緒に、真実の愛を見つけましょう。</p>
@@ -71,7 +70,7 @@ function App() {
                   <a href="#terms">利用規約</a>
                 </nav>
               </footer>
-            </div>
+            </>
           } />
         </Routes>
       </div>
