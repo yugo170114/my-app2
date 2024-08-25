@@ -17,9 +17,13 @@ function App() {
           ☰
         </button>
         <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
+          <a href="#about-us">About Us</a>
+          <a href="#company">Company</a>
+          <a href="#service">Service</a>
           <a href="#login">ログイン</a>
-          <a href="#signup">サインアップ</a>
+          <a href="#signup">新規登録</a>
         </nav>
+        <a href="#login" className="login-btn">ログイン</a>
       </header>
 
       {/* ヒーローセクション */}

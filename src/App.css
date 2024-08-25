@@ -35,6 +35,16 @@
   display: block;
 }
 
+.login-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+  margin-left: 20px; /* ログインボタンのスペース */
+}
+
 .hero {
   background: #f8f9fa; /* ヘッダーと同じ背景色 */
   padding: 60px 20px;
@@ -68,13 +78,14 @@ footer {
 .separator {
   color: white;
 }
+
 @media (max-width: 768px) {
   .nav {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
-    right: 20px;
+    top: 60px;  /* ヘッダーの下に配置 */
+    right: 20px;  /* 右端に配置 */
     background-color: #f8f9fa;
     width: 200px;
     border: 1px solid #ddd;
@@ -87,5 +98,13 @@ footer {
 
   .hamburger {
     display: block;
+  }
+
+  .App-header {
+    position: relative; /* ハンバーガーメニューをヘッダー内に配置 */
+  }
+
+  .login-btn {
+    display: none; /* モバイルではログインボタンを非表示 */
   }
 }
