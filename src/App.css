@@ -108,3 +108,31 @@ footer {
     display: none; /* モバイルではログインボタンを非表示 */
   }
 }
+.page {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.page-header {
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.page-content {
+  margin: 20px;
+}
+
+.page-footer {
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.page-footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.page-footer a:hover {
+  text-decoration: underline;
+}

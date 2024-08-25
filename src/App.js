@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import './App.css';  // CSSファイルのインポート
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import './App.css';
+import AboutUs from './AboutUs';
+import Company from './Company';
+import Service from './Service';
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -9,29 +13,33 @@ function App() {
   };
 
   return (
-    <div className="App">
-      {/* ヘッダー */}
-      <header className="App-header">
-        <h1>カラコミ</h1>
-        <button className="hamburger" onClick={toggleMenu}>
-          ☰
-        </button>
-        <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
-          <a href="#about-us">About Us</a>
-          <a href="#company">Company</a>
-          <a href="#service">Service</a>
-          <a href="#login">ログイン</a>
-          <a href="#signup">新規登録</a>
-        </nav>
-        <a href="#login" className="login-btn">ログイン</a>
-      </header>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <h1>カラコミ</h1>
+          <button className="hamburger" onClick={toggleMenu}>
+            ☰
+          </button>
+          <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
+            <Link to="/about-us">About Us</Link>
+            <Link to="/company">Company</Link>
+            <Link to="/service">Service</Link>
+            <Link to="/login" className="login-btn">ログイン</Link>
+            <Link to="/signup" className="login-btn">新規登録</Link>
+          </nav>
+          <Link to="/login" className="login-btn">ログイン</Link>
+        </header>
 
-      {/* ヒーローセクション */}
-      <section className="hero">
-        <h2>理想の相手を見つけよう</h2>
-        <p>数百万の他のユーザーと一緒に、真実の愛を見つけましょう。</p>
-        <button>始める</button>
-      </section>
+        <Routes>
+          <Route path="/about-us" component={AboutUs} />
+          <Route path="/company" component={Company} />
+          <Route path="/service" component={Service} />
+          <Route path="/" exact>
+            <section className="hero">
+              <h2>理想の相手を見つけよう</h2>
+              <p>数百万の他のユーザーと一緒に、真実の愛を見つけましょう。</p>
+              <button>始める</button>
+            </section>
 
       {/* サービスの特徴 */}
       <section className="features">
@@ -61,7 +69,10 @@ function App() {
           <a href="#terms">利用規約</a>
         </nav>
       </footer>
-    </div>
+      </Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
